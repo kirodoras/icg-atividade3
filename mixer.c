@@ -122,6 +122,7 @@ void main(int argc, char **argv)
         for (i = 0; i < l; i++)
             fprintf(file, "%c%c%c", imagem[i][j][0], imagem[i][j][1], imagem[i][j][2]);
     fclose(file);
-
+    for (i = 0; i < l; i++)
+        free(imagem[i]);
     free(imagem);
 }
